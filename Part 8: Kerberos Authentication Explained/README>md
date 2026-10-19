@@ -1,0 +1,75 @@
+🔐 **Active Directory Learning Series | Part 8: Kerberos Authentication Explained**
+
+How does Windows securely authenticate users without repeatedly sending passwords across the network?
+
+The answer is **Kerberos Authentication!**
+
+🛡️ **What Is Kerberos?**
+
+Kerberos is a ticket-based network authentication protocol used by Active Directory Domain Services (AD DS) to securely authenticate users and computers.
+
+It is the default authentication protocol in modern Windows Active Directory domains.
+
+🔹 **Why Is Kerberos Important?**
+
+✅ Provides secure, ticket-based authentication.
+
+✅ Supports Single Sign-On (SSO).
+
+✅ Enables mutual authentication between clients and services.
+
+✅ Reduces repeated password transmission.
+
+✅ Supports secure access to enterprise resources.
+
+⚙️ **How Kerberos Authentication Works**
+
+1️⃣ **User Logon:** A user signs in to a domain-joined computer.
+
+2️⃣ **Authentication Service (AS):** The client requests authentication from the Domain Controller.
+
+3️⃣ **Ticket Granting Ticket (TGT):** After successful authentication, the client receives a TGT.
+
+4️⃣ **Ticket Granting Service (TGS):** The client uses its TGT to request a service ticket.
+
+5️⃣ **Service Ticket:** The Domain Controller issues a ticket for the requested service.
+
+6️⃣ **Resource Access:** The client presents the service ticket to access the resource, subject to authorization.
+
+🎟️ **Two Important Kerberos Tickets**
+
+🔹 **TGT:** Allows users to request service tickets without repeatedly entering credentials.
+
+🔹 **Service Ticket:** Used to authenticate to a specific service, such as a file server.
+
+💡 **Real-World Scenario**
+
+Imagine Rahul signs in to his company laptop and accesses a shared folder.
+
+Instead of entering his password again, Kerberos uses tickets to authenticate him to the file server.
+
+This provides a smoother and more secure user experience.
+
+🛠️ **Common Kerberos Troubleshooting**
+
+✅ Check time synchronization.
+
+✅ Verify DNS configuration.
+
+✅ Check Service Principal Names (SPNs).
+
+✅ Review authentication event logs.
+
+✅ Use `klist` to inspect Kerberos tickets.
+
+🎯 **Key Takeaway**
+
+Kerberos is a fundamental component of Active Directory security, providing ticket-based authentication, Single Sign-On, and secure access to network resources.
+
+🚀 I'm continuing my Active Directory learning journey through Windows Server, IAM, PowerShell, and hands-on labs.
+
+📌 **Coming Next — Part 9: LDAP vs. LDAPS Explained**
+
+💬 Have you ever troubleshot a Kerberos authentication issue?
+
+#ActiveDirectory #Kerberos #WindowsServer #IAM #Cybersecurity #Authentication #SystemAdministration #PowerShell #LearningInPublic
